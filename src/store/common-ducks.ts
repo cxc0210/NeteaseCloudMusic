@@ -9,7 +9,14 @@ const defaultState = {
 
 // reducer
 export const commonReducer = (state = defaultState, action:any) => {
-	return defaultState;
+	switch(action.type){
+		case SHOW_LOGIN_PANEL:
+			return Object.assign({}, {showHeaderLoginPanel: true});
+		case HIDE_LOGIN_PANEL:
+			return Object.assign({}, {showHeaderLoginPanel: false});
+		default:
+			return defaultState;
+	}
 };
 
 // anction creater
