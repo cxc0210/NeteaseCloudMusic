@@ -50,6 +50,7 @@ export const HeaderNav = styled.div`
 `;
 
 export const HeaderLogin = styled.div`
+	position: relative;
 	float: right;
 	height: 45px;
 	margin: 19px 0 0 20px;
@@ -64,6 +65,41 @@ export const HeaderLogin = styled.div`
 		font-size: 12px;
 		text-decoration: none;
 	}
+`;
+
+export const HeaderLoginPanel = styled.div`
+	  position: absolute;
+    top: 38px;
+    right: -43px;
+    width: 158px;
+    background: #2b2b2b;
+    border: 1px solid #202020;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
+		border-radius: 4px;
+		font-size: 12px;
+		ul.login-item li {
+			position: relative;
+			height: 38px;
+			box-sizing: border-box;
+			overflow: hidden;
+			padding-left: 24px;
+			color: #ccc;
+			line-height: 39px;
+			border-bottom: 0.1px solid #222;
+			cursor: pointer;
+			user-select: none;
+			.iconfont {
+				position: relative;
+				top: 1px;
+				margin-right: 7px;
+				color: #888;
+				font-size: 16px;
+			}
+			&:hover {
+				background: #353535;
+				color: #fff
+			}
+		}
 `;
 
 export const HeaderCreatorBtn = styled.div`

@@ -5,6 +5,7 @@ import {
 	HeaderLogo,
 	HeaderNav,
 	HeaderLogin,
+	HeaderLoginPanel,
 	HeaderCreatorBtn,
 	HeaderSearchWrapper
 } from './style';
@@ -29,6 +30,30 @@ const Header = () => {
 					</HeaderNav>
 					<HeaderLogin>
 						<a href="">登录</a>
+						<HeaderLoginPanel>
+							<ul className="login-item">
+								<li>
+									<i className="iconfont">&#xe610;</i>
+									手机号登录
+								</li>
+								<li>
+									<i className="iconfont">&#xe640;</i>
+									微信登录
+								</li>
+								<li>
+									<i className="iconfont">&#xe6a1;</i>
+									QQ登录
+								</li>
+								<li>
+									<i className="iconfont">&#xe737;</i>
+									新浪微博登录
+								</li>
+								<li>
+									<i className="iconfont">&#xe6ae;</i>
+									网易邮箱账号登录
+								</li>
+							</ul>
+						</HeaderLoginPanel>
 					</HeaderLogin>
 					<HeaderCreatorBtn>
 						创作者中心

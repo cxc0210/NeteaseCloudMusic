@@ -1,16 +1,9 @@
 import { combineReducers } from 'redux';
+import { commonReducer } from './common-ducks';
 
-const defaultState = {
-	inputValue: '123',
-	list: ["234", "345"]
-}
-
-const reducer = (state = defaultState, action:any) => {
-	return defaultState;
-};
 
 const rootReducer = combineReducers({
-	test: reducer
+	common: commonReducer
 });
 
 export default rootReducer;
