@@ -4,29 +4,32 @@ const HIDE_LOGIN_PANEL = "header/hide_login_panel";
 
 // state
 const defaultState = {
-	showHeaderLoginPanel: false
+
 }
 
 // reducer
 export const commonReducer = (state = defaultState, action:any) => {
+	let newState = Object.assign({}, state);
 	switch(action.type){
 		case SHOW_LOGIN_PANEL:
-			return Object.assign({}, {showHeaderLoginPanel: true});
+			//newState.showLoginPanel = true;
+			return newState;
 		case HIDE_LOGIN_PANEL:
-			return Object.assign({}, {showHeaderLoginPanel: false});
+			//newState.showLoginPanel = false;
+			return newState;
 		default:
 			return defaultState;
 	}
 };
 
 // anction creater
-export function showLoginPanel(){
+export function showLoginPanelAction(){
 	return {
 		type: SHOW_LOGIN_PANEL
 	}
 };
 
-export function hideLoginPanel(){
+export function hideLoginPanelAction(){
 	return {
 		type: HIDE_LOGIN_PANEL
 	}

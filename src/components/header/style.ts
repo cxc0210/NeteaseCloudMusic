@@ -65,6 +65,12 @@ export const HeaderLogin = styled.div`
 		font-size: 12px;
 		text-decoration: none;
 	}
+	.show {
+		display: block;
+	}
+	.hide {
+		display: none;
+	}
 `;
 
 export const HeaderLoginPanel = styled.div`

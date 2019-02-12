@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { connect } from 'react-redux'
 import {
 	HeaderWrapper,
 	HeaderContent,
@@ -11,6 +12,14 @@ import {
 } from './style';
 
 const Header = () => {
+	const [showLoginPanel, setShowLoginPanel] = React.useState(false);
+	const [loginMethodList] = React.useState([
+		{title : '手机号登录', icon: '&#xe610;'},
+		{title : '微信登录', icon: '&#xe640;'},
+		{title : 'QQ登录', icon: '&#xe6a1;'},
+		{title : '新浪微博登录', icon: '&#xe737;'},
+		{title : '网易邮箱账号登录', icon: '&#xe6ae;'},
+	]);
 	return (
 		<React.Fragment>
 			<HeaderWrapper>
@@ -28,30 +37,14 @@ const Header = () => {
 							<li>下载客户端</li>
 						</ul>
 					</HeaderNav>
-					<HeaderLogin>
+					<HeaderLogin
+						onMouseEnter={() => setShowLoginPanel(true)}
+						onMouseLeave={() => setShowLoginPanel(false)}
+					>
 						<a href="">登录</a>
-						<HeaderLoginPanel >
+						<HeaderLoginPanel	className={showLoginPanel ? "show" : "hide"}>	
 							<ul className="login-item">
-								<li>
-									<i className="iconfont">&#xe610;</i>
-									手机号登录
-								</li>
-								<li>
-									<i className="iconfont">&#xe640;</i>
-									微信登录
-								</li>
-								<li>
-									<i className="iconfont">&#xe6a1;</i>
-									QQ登录
-								</li>
-								<li>
-									<i className="iconfont">&#xe737;</i>
-									新浪微博登录
-								</li>
-								<li>
-									<i className="iconfont">&#xe6ae;</i>
-									网易邮箱账号登录
-								</li>
+								{loginMethodList.map(m => <li><i className="iconfont" dangerouslySetInnerHTML = {{__html : m.icon}}></i>{m.title}</li>)}
 							</ul>
 						</HeaderLoginPanel>
 					</HeaderLogin>
@@ -59,7 +52,7 @@ const Header = () => {
 						创作者中心
 					</HeaderCreatorBtn>
 					<HeaderSearchWrapper>
-						<input type="text"/>
+						<input type="text" />
 					</HeaderSearchWrapper>
 				</HeaderContent>
 			</HeaderWrapper>
@@ -67,4 +60,11 @@ const Header = () => {
 	);
 };
 
-export default Header;
+
+const mapStateToProps = (state:any) => {
+}
+
+const mapDispatchToProps = (dispatch:any) => {
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
