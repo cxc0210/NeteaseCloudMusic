@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { GlobleStyle } from './style';
 import { GlobleIconfont } from './static/iconfont'
-import { Home } from './pages';
+import { Discover } from './pages';
 
 const App = () => {
   return (
     <div>
       <GlobleStyle />
       <GlobleIconfont />
-      <Home />
+      <Discover />
     </div>
   );
 };

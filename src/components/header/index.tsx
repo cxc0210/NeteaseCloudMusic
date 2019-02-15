@@ -52,7 +52,7 @@ const Header = () => {
 						创作者中心
 					</HeaderCreatorBtn>
 					<HeaderSearchWrapper>
-						<input type="text" />
+						<input type="text" placeholder="音乐/视频/电台/用户"/>
 					</HeaderSearchWrapper>
 				</HeaderContent>
 			</HeaderWrapper>

@@ -148,6 +148,18 @@ export const HeaderSearchWrapper = styled.div`
 		border: 0;
 		outline: none;
 	}
+	input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color: #999;
+	}
+	input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: #999;
+	}
+	input::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: #999;
+	}
+	input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: #999;
+	}
 }
 `;
 ;

@@ -1,2 +1,3 @@
-export * from './home';
-export * from './download';
+import Discover from "./discover";
+
+export { Discover } ;
