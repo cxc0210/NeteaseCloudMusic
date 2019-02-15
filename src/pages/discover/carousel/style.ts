@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import downloadPng from '../../../static/images/download.png';
 
-export const CaroselWrapper = styled.div`
+export const CarouselWrapper = styled.div`
 	background-image: url(http://p1.music.126.net/ZcaAGI2_kXL6JcDcVE_cmA==/109951163861647702.jpg);
 	background-repeat: repeat-x;
 `;
 
-export const CaroselContent = styled.div`
+export const CarouselContent = styled.div`
 	position: relative;
 	width: 982px;
 	height: 336px;
@@ -14,7 +14,7 @@ export const CaroselContent = styled.div`
 	background: blue;
 `;
 
-export const CaroselDownload = styled.div`
+export const CarouselDownload = styled.div`
 	position: absolute;
 	top: 0;
 	z-index: 20;
@@ -32,7 +32,7 @@ export const CaroselDownload = styled.div`
 		&:hover {
 			background-position: 0 -340px;
 			background-image: url(${downloadPng});
-		}
+		}s
 	}
 	p {
 		margin: 10px auto;
