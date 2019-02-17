@@ -83,6 +83,7 @@ export const HeaderLoginPanel = styled.div`
     box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
 		border-radius: 4px;
 		font-size: 12px;
+		z-index: 99;
 		ul.login-item li {
 			position: relative;
 			height: 38px;
