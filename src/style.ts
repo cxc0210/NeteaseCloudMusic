@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background: url("./abc.png");
 }
 ol, ul {
 	list-style: none;

@@ -1,11 +1,22 @@
 import * as React from 'react';
+import axios from 'axios';
 import {
   CarouselWrapper,
   CarouselContent,
-  CarouselDownload
+  CarouselDownload,
 } from './style'
 
 export const Carousel = () => {
+  //const [list, setList] = React.useState([]);
+  React.useEffect(() => {
+    fetchBanners();
+  },[]);
+  async function fetchBanners() {
+    let url = '/banner';
+    const response = await axios.get(url);
+    console.log(response);
+    //setList(response.data.banners);
+  };
   return (
     <React.Fragment>
       <CarouselWrapper>
