@@ -25,6 +25,57 @@ export const CarouselContent = styled.div<CarouselContentProps>`
 	margin: 0 auto;
 	background-image: url(${p => p.bgimg});
 	background-repeat: no-repeat;
+	.banner-link {
+		display: block;
+		height: 100%;
+	}
+	.arrow {
+		display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    width: 37px;
+    height: 63px;
+		text-indent: -9999px;
+		background: url(${bannerPng}) 0 9999px no-repeat;
+		cursor: pointer;
+		&.arrowl {
+			left: -68px;
+			background-position: 0 -360px;
+			&:hover {
+				background-position: 0 -430px;
+			}
+		}
+		&.arrowr {
+			right: -68px;
+			background-position: 0 -508px;
+			&:hover {
+				background-position: 0 -578px;
+			}
+		}
+	}
+	.dots {
+		position: absolute;
+    top: 310px;
+    left: 0;
+    width: 730px;
+    height: 20px;
+		text-align: center;
+		cursor: pointer;
+		.dot {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background: url(${bannerPng}) 0 9999px no-repeat;
+			background-position: 3px -343px;
+			&:hover {
+				background-position: -16px -343px;
+			}
+			&.active {
+				background-position: -16px -343px;
+			}
+		}
+	}
 `;
 
 export const CarouselDownload = styled.div`

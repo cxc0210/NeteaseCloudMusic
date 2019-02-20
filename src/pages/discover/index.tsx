@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Header from '../../components/header';
 import Carousel from './carousel';
 import { 
 	NavWrapper,
@@ -17,7 +16,6 @@ const Discover = () => {
     ]);
 	return (
 		<React.Fragment>
-			<Header />
 				<NavWrapper>
 					<NavWrapperContent>
 						<ul>{navList.map(nav => <li><a>{nav.title}</a></li>)}</ul>
