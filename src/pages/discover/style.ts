@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import mainPanelPng from '../../static/images/discoverMainBg.png';
 
 export const NavWrapper = styled.div`
 	height: 35px;
@@ -37,4 +38,30 @@ export const NavWrapperContent = styled.div`
 			}
 		}
 	}
+`
+
+export const MainPanel = styled.div`
+	width: 980px;
+	min-height: 700px;
+	margin: 0 auto;
+	border: 1px solid #d3d3d3;
+	border-width: 0 1px;
+	background: url(${mainPanelPng}) repeat-y 100% 100%;
+`
+
+export const MainLeftPanel = styled.div`
+	float: left;
+	width: 100%;
+	margin-right: -250px;
+`
+export const MainLeftPanelContent = styled.div`
+	padding: 20px 20px 40px;
+	margin-right: 251px;
+`
+
+export const MainRightPanel = styled.div`
+	position: relative;
+	float: right;
+	width: 250px;
+	zoom: 1;
 `

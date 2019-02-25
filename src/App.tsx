@@ -12,21 +12,6 @@ const App = () => {
       <GlobleIconfont />
       <Header />
       <Discover />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Footer />
     </div>
   );

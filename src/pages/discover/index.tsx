@@ -1,8 +1,13 @@
 import * as React from 'react';
 import Carousel from './carousel';
+import HotRecommends from './hot-recommends';
 import { 
 	NavWrapper,
 	NavWrapperContent,
+	MainPanel,
+	MainLeftPanel,
+	MainRightPanel,
+	MainLeftPanelContent
 } from './style'
 
 const Discover = () => {
@@ -22,6 +27,14 @@ const Discover = () => {
 					</NavWrapperContent>
 				</NavWrapper>
 				<Carousel></Carousel>
+				<MainPanel>
+					<MainLeftPanel>
+						<MainLeftPanelContent>
+							<HotRecommends />
+						</MainLeftPanelContent>
+					</MainLeftPanel>
+					<MainRightPanel>345</MainRightPanel>
+				</MainPanel>
 		</React.Fragment>
 	);
 };

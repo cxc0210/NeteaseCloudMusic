@@ -6,7 +6,7 @@ import {
   CarouselDownload,
 } from './style'
 
-export const Carousel = () => {
+const Carousel = () => {
   const [banners] = React.useState([
     {
     picUrl : "http://p1.music.126.net/0nU3eDMuvxwgGbaFQrFG3g==/109951163873780847.jpg",
@@ -110,14 +110,13 @@ export const Carousel = () => {
   let timer:any;
 
   const beginBannerInterval = () => {
-    timer = setTimeout(() => {
+    timer = setInterval(() => {
       bannerIndex == banners.length - 1 ? setBannerIndex(0) : setBannerIndex(bannerIndex + 1);
     }, 4000);
   };
 
   const stopBannerInterval = () => {
-    clearTimeout(timer)
-
+    clearInterval(timer)
   };
 
   const clickLeftArrow = () => {
