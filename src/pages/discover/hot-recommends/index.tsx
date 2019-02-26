@@ -1,4 +1,5 @@
 import * as React from 'react';
+import axios from 'axios';
 import {
   HotRecommedsHeader
 } from './style'
@@ -11,6 +12,20 @@ const HotRecommends = () => {
     {id: 4, name: '民谣'},
     {id: 5, name: '电子'},
   ]);
+  React.useEffect(() => {
+    fetchPlayList().then(res => {
+      console.log(res);
+    });
+  });
+  async function fetchPlayList() {
+    let playlist = await axios.get('/personalized');
+    let djList = await axios.get('/personalized/djprogram');
+    let result = playlist.data.result.slice(0, 5);
+    result.splice(3,0,djList.data.result[0]);
+    result.splice(5,0,djList.data.result[1]);
+    result.splice(7,0,djList.data.result[2]);
+    return result;
+  };
   return (
     <React.Fragment>
       <HotRecommedsHeader>
